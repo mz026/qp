@@ -44,3 +44,6 @@ go install github.com/mz026/qp
   qp
   ```
 
+## LICENCE
+
+MIT
