@@ -24,6 +24,12 @@ func main() {
   var resp Response
   json.Unmarshal(data, &resp)
 
-  PrintPrSection("To Review", resp.GetAssignedToMe())
-  PrintPrSection("My Pull Requests", resp.GetAuthoredByMe())
+  assignedToMe := resp.GetAssignedToMe()
+  authoredByMe := resp.GetAuthoredByMe()
+  PrintPrSection("To Review", assignedToMe)
+  PrintPrSection("My Pull Requests", authoredByMe)
+
+  if len(assignedToMe) == 0 && len(authoredByMe) == 0 {
+    PrintClear()
+  }
 }

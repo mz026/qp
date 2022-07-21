@@ -46,3 +46,7 @@ func printReviewStats(rs *ReviewStats) {
   }
   fmt.Println(" ", "📝", strings.Join(revs, gray(", ")))
 }
+
+func PrintClear() {
+  fmt.Println(green("✨ Yay, all PR works are done!"))
+}
